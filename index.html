@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     SEO設定 — ここを編集すると検索結果の表示が変わります
+     ============================================================ -->
+
+<!-- 基本SEO -->
+<title>星屑夢屋 ✦ 無料お菓子占い | Flora Mirage</title>
+<meta name="description" content="お菓子を選ぶだけで今日のあなたへのメッセージが届く、無料のお菓子占いサイト。魔法用具・記憶の鏡・海風の泉・Féeriqueの5つの扉があなたを導きます。魔法使いアリッサによるメール鑑定も受付中。">
+<meta name="keywords" content="無料占い,お菓子占い,スピリチュアル,タロット,魔法,フローラミラージュ,星屑夢屋,魔法使いアリッサ,メール鑑定,前世占い,ファッション占い,癒し,オラクル">
+<meta name="author" content="魔法使いアリッサ">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alyssa-jp.github.io/hoshikuzu-yumeshop/">
+
+<!-- OGP（SNSシェア時の表示） -->
+<meta property="og:title" content="星屑夢屋 ✦ 無料お菓子占い | Flora Mirage">
+<meta property="og:description" content="お菓子を選ぶだけで今日のあなたへのメッセージが届く、無料のお菓子占いサイト。魔法使いアリッサのメール鑑定も受付中。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alyssa-jp.github.io/hoshikuzu-yumeshop/">
+<meta property="og:image" content="https://alyssa-jp.github.io/hoshikuzu-yumeshop/星屑金平糖.PNG">
+<meta property="og:site_name" content="星屑夢屋 Flora Mirage">
+<meta property="og:locale" content="ja_JP">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="星屑夢屋 ✦ 無料お菓子占い | Flora Mirage">
+<meta name="twitter:description" content="お菓子を選ぶだけで今日のあなたへのメッセージが届く、無料のお菓子占いサイト。魔法使いアリッサのメール鑑定も受付中。">
+<meta name="twitter:image" content="https://alyssa-jp.github.io/hoshikuzu-yumeshop/星屑金平糖.PNG">
+
+<!-- 構造化データ（Googleリッチリザルト用） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "星屑夢屋 Flora Mirage",
+  "url": "https://alyssa-jp.github.io/hoshikuzu-yumeshop/",
+  "description": "お菓子を選ぶだけで今日のあなたへのメッセージが届く、無料のお菓子占いサイト",
+  "author": {
+    "@type": "Person",
+    "name": "魔法使いアリッサ",
+    "url": "https://magicalalyssak.my.canva.site/dafavb5irqa"
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "お菓子占い・メール鑑定",
+    "price": "500",
+    "priceCurrency": "JPY"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ================================================================
+   CSS変数 — 色やフォントをここで一括管理しています
+   ================================================================ */
+:root {
+  --bg:          #08060f;
+  --bg-card:     #110d1e;
+  --bg-panel:    #17112b;
+  --bg-panel2:   #1e1635;
+  --gold:        #d4a853;
+  --gold-light:  #f0d080;
+  --gold-pale:   #f8ecc0;
+  --text:        #ede5ff;
+  --text-sub:    #9585bb;
+  --text-muted:  #5a4e78;
+  --border:      rgba(212,168,83,0.2);
+  --border-light:rgba(212,168,83,0.4);
+
+  /* セクション別カラー */
+  --c1: #a08fdc;   /* 魔法用具店 ラベンダー */
+  --c2: #7ab8d8;   /* 記憶の鏡  スカイ */
+  --c3: #68c9a2;   /* 海風の泉  ミント */
+  --c4: #d47da8;   /* Féerique  ローズ */
+  --c5: #d4a853;   /* 星屑夢屋  ゴールド */
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'Noto Serif JP', serif;
+  --font-ja:      'Shippori Mincho', serif;
+}
+
+/* ================================================================
+   リセット & ベース
+   ================================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* 星背景 */
+body::after {
+  content: '';
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 8%  12%, rgba(255,255,255,.55) 0, transparent 100%),
+    radial-gradient(1px 1px at 22% 65%, rgba(255,255,255,.35) 0, transparent 100%),
+    radial-gradient(1px 1px at 38% 28%, rgba(255,255,255,.65) 0, transparent 100%),
+    radial-gradient(1px 1px at 55% 80%, rgba(255,255,255,.45) 0, transparent 100%),
+    radial-gradient(1px 1px at 72% 42%, rgba(255,255,255,.50) 0, transparent 100%),
+    radial-gradient(1px 1px at 88% 18%, rgba(255,255,255,.60) 0, transparent 100%),
+    radial-gradient(1px 1px at 15% 90%, rgba(200,180,255,.50) 0, transparent 100%),
+    radial-gradient(1px 1px at 48% 55%, rgba(200,220,255,.40) 0, transparent 100%),
+    radial-gradient(1px 1px at 92% 75%, rgba(255,255,255,.45) 0, transparent 100%),
+    radial-gradient(1px 1px at 62% 10%, rgba(255,255,255,.55) 0, transparent 100%),
+    radial-gradient(1px 1px at 32% 47%, rgba(220,200,255,.35) 0, transparent 100%),
+    radial-gradient(1px 1px at 78% 60%, rgba(255,255,255,.40) 0, transparent 100%);
+  animation: starTwinkle 6s ease-in-out infinite alternate;
+}
+@keyframes starTwinkle {
+  0%   { opacity: .65; }
+  50%  { opacity: 1; }
+  100% { opacity: .55; }
+}
+
+/* ================================================================
+   ページ管理（画面の切り替え）
+   ================================================================ */
+.page { display: none; position: relative; z-index: 1; }
+.page.active { display: block; animation: pageIn .5s ease; }
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================================================
+   共通部品
+   ================================================================ */
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  font-family: var(--font-ja);
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1px solid currentColor;
+  margin-bottom: 12px;
+}
+
+.gold-line {
+  width: 120px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto;
+}
+
+/* ================================================================
+   ── PAGE 1: 選択ページ ──
+   ================================================================ */
+#page-select { padding-bottom: 80px; }
+
+/* ヘッダー */
+.shop-header {
+  text-align: center;
+  padding: 64px 20px 48px;
+}
+.shop-en {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-light);
+  letter-spacing: .06em;
+  text-shadow: 0 0 40px rgba(212,168,83,.4), 0 0 80px rgba(212,168,83,.15);
+  line-height: 1.1;
+}
+.shop-ja {
+  font-family: var(--font-ja);
+  font-size: .85rem;
+  letter-spacing: .35em;
+  color: var(--text-sub);
+  margin-top: 6px;
+}
+.shop-copy {
+  font-size: .82rem;
+  color: var(--text-muted);
+  letter-spacing: .12em;
+  margin-top: 28px;
+  line-height: 1.9;
+}
+
+/* セクションフィルター */
+.filter-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px 36px;
+}
+.filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-sub);
+  padding: 7px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: var(--font-ja);
+  font-size: .78rem;
+  letter-spacing: .08em;
+  transition: all .3s;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  color: var(--gold-pale);
+  border-color: var(--gold);
+  background: var(--bg-panel);
+  box-shadow: 0 0 14px rgba(212,168,83,.15);
+}
+
+/* お菓子グリッド */
+.candy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 18px;
+}
+
+/* お菓子カード */
+.candy-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px 14px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .38s cubic-bezier(.34,1.56,.64,1);
+  position: relative;
+  overflow: hidden;
+}
+.candy-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 0%,
+    var(--card-glow, rgba(212,168,83,.07)) 0%, transparent 65%);
+}
+.candy-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  border-color: var(--card-accent, var(--gold));
+  box-shadow: 0 16px 48px rgba(0,0,0,.5),
+              0 0 24px var(--card-glow, rgba(212,168,83,.2));
+}
+.candy-emoji {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 12px;
+  transition: transform .3s;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.4));
+}
+.candy-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  transition: transform .3s;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
+}
+.candy-card:hover .candy-emoji,
+.candy-card:hover .candy-img { transform: scale(1.08) rotate(-3deg); }
+
+.candy-name {
+  font-family: var(--font-ja);
+  font-size: .92rem;
+  color: var(--gold-pale);
+  margin-bottom: 6px;
+}
+.candy-desc {
+  font-size: .69rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.candy-badge {
+  display: inline-block;
+  margin-top: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: .65rem;
+  letter-spacing: .08em;
+  border: 1px solid currentColor;
+  color: var(--card-accent, var(--gold));
+}
+
+/* セクション別カード色 */
+[data-sec="1"] { --card-accent: var(--c1); --card-glow: rgba(160,143,220,.15); }
+[data-sec="2"] { --card-accent: var(--c2); --card-glow: rgba(122,184,216,.15); }
+[data-sec="3"] { --card-accent: var(--c3); --card-glow: rgba(104,201,162,.15); }
+[data-sec="4"] { --card-accent: var(--c4); --card-glow: rgba(212,125,168,.15); }
+[data-sec="5"] { --card-accent: var(--c5); --card-glow: rgba(212,168,83,.18); }
+
+/* ================================================================
+   ── PAGE 2: 結果・購入ページ ──
+   ================================================================ */
+#page-result { padding: 0 0 80px; }
+
+/* ヒーロー帯 */
+.result-hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  position: relative;
+}
+.result-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%,
+    var(--hero-glow, rgba(212,168,83,.12)) 0%, transparent 65%);
+  pointer-events: none;
+}
+.result-emoji-big {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 16px;
+  animation: floatEmoji 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.5));
+}
+@keyframes floatEmoji {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%       { transform: translateY(-12px) rotate(3deg); }
+}
+.result-candy-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+  letter-spacing: .04em;
+}
+.result-candy-desc {
+  font-size: .82rem;
+  color: var(--text-sub);
+  margin-bottom: 20px;
+  letter-spacing: .06em;
+}
+.result-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ja);
+  font-size: .78rem;
+  letter-spacing: .12em;
+  padding: 6px 20px;
+  border-radius: 30px;
+  border: 1px solid currentColor;
+  margin-bottom: 28px;
+}
+
+/* イラスト */
+.result-illust {
+  margin-bottom: 16px;
+}
+.result-illust img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-panel);
+  padding: 8px;
+}
+
+/* 結果ページ絵文字（イラストなし時） */
+.result-emoji-big {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.4));
+}
+
+/* お告げメッセージ */
+.message-card {
+  background: var(--bg-panel);
+  border-left: 3px solid var(--result-accent, var(--gold));
+  border-radius: 0 16px 16px 0;
+  padding: 24px 28px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.message-card::before {
+  content: '✦';
+  position: absolute;
+  top: -14px; left: 20px;
+  font-size: .9rem;
+  color: var(--result-accent, var(--gold));
+  background: var(--bg);
+  padding: 0 8px;
+}
+.message-text {
+  font-size: .96rem;
+  line-height: 2;
+  color: var(--text);
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+/* ──────────────────────────────────────────
+   体験セッションカード群
+   ────────────────────────────────────────── */
+.sessions-title {
+  font-family: var(--font-ja);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sessions-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+/* セッション単体 */
+.session-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 4px 20px;
+  align-items: start;
+  transition: border-color .3s, box-shadow .3s;
+  position: relative;
+  overflow: hidden;
+}
+.session-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--result-accent, var(--gold));
+  border-radius: 3px 0 0 3px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.session-card:hover { border-color: var(--result-accent, var(--gold)); box-shadow: 0 6px 24px rgba(0,0,0,.3); }
+.session-card:hover::before { opacity: 1; }
+
+/* おすすめバッジ */
+.session-card.recommended {
+  border-color: var(--result-accent, var(--gold));
+  background: var(--bg-panel);
+}
+.session-card.recommended::before { opacity: 1; }
+.recommended-tag {
+  position: absolute;
+  top: 14px; right: 14px;
+  font-size: .62rem;
+  letter-spacing: .1em;
+  padding: 2px 10px;
+  border-radius: 12px;
+  background: var(--result-accent, var(--gold));
+  color: var(--bg);
+  font-family: var(--font-ja);
+}
+
+.session-name {
+  font-family: var(--font-ja);
+  font-size: .95rem;
+  color: var(--gold-pale);
+  grid-column: 1;
+  grid-row: 1;
+}
+.session-desc {
+  font-size: .75rem;
+  color: var(--text-sub);
+  line-height: 1.65;
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 4px;
+}
+.session-price-col {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+}
+.session-price {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--result-accent, var(--gold));
+  white-space: nowrap;
+}
+.session-price span { font-size: .75rem; color: var(--text-sub); }
+
+/* 購入ボタン */
+.buy-btn {
+  display: inline-block;
+  padding: 9px 20px;
+  border-radius: 30px;
+  background: var(--result-accent, var(--gold));
+  color: var(--bg);
+  font-family: var(--font-ja);
+  font-size: .75rem;
+  letter-spacing: .08em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,.3);
+}
+.buy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+  filter: brightness(1.12);
+}
+.buy-btn.ghost {
+  background: transparent;
+  border: 1px solid var(--result-accent, var(--gold));
+  color: var(--result-accent, var(--gold));
+}
+.buy-btn.ghost:hover { background: var(--bg-panel2); }
+
+/* フッターアクション */
+.result-footer {
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.back-link {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-ja);
+  font-size: .78rem;
+  letter-spacing: .1em;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color .2s;
+}
+.back-link:hover { color: var(--text-sub); }
+
+/* セクション別アクセント（結果ページ） */
+.result-sec-1 { --result-accent: var(--c1); --hero-glow: rgba(160,143,220,.15); }
+.result-sec-2 { --result-accent: var(--c2); --hero-glow: rgba(122,184,216,.15); }
+.result-sec-3 { --result-accent: var(--c3); --hero-glow: rgba(104,201,162,.15); }
+.result-sec-4 { --result-accent: var(--c4); --hero-glow: rgba(212,125,168,.15); }
+.result-sec-5 { --result-accent: var(--c5); --hero-glow: rgba(212,168,83,.18); }
+
+/* ================================================================
+   ── SNSシェアボタン ──
+   ================================================================ */
+.share-section {
+  margin-bottom: 36px;
+}
+.share-title {
+  font-family: var(--font-ja);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 16px;
+}
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-family: var(--font-ja);
+  font-size: .78rem;
+  letter-spacing: .08em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .3s;
+  white-space: nowrap;
+}
+.share-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+/* X（Twitter） */
+.share-btn.x-btn {
+  border-color: rgba(255,255,255,.2);
+}
+.share-btn.x-btn:hover {
+  background: #1a1a1a;
+  border-color: rgba(255,255,255,.5);
+  color: #fff;
+}
+/* LINE */
+.share-btn.line-btn {
+  border-color: rgba(6,199,85,.3);
+}
+.share-btn.line-btn:hover {
+  background: #06c755;
+  border-color: #06c755;
+  color: #fff;
+}
+/* コピー */
+.share-btn.copy-btn {
+  border-color: var(--border-light);
+}
+.share-btn.copy-btn:hover {
+  background: var(--bg-panel);
+  border-color: var(--gold);
+  color: var(--gold-pale);
+}
+/* コピー完了トースト */
+.copy-toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--bg-panel2);
+  border: 1px solid var(--gold);
+  color: var(--gold-pale);
+  font-family: var(--font-ja);
+  font-size: .8rem;
+  letter-spacing: .1em;
+  padding: 12px 28px;
+  border-radius: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s cubic-bezier(.34,1.56,.64,1);
+  z-index: 999;
+  white-space: nowrap;
+}
+.copy-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ================================================================
+   ── 本日のドリンク占い ──
+   ================================================================ */
+.drink-section {
+  margin: 40px 0 32px;
+  padding-top: 32px;
+  border-top: 1px dashed var(--border);
+}
+.drink-title-label {
+  font-family: var(--font-ja);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 18px;
+}
+.drink-card {
+  background: linear-gradient(180deg, var(--bg-panel) 0%, var(--bg-card) 100%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 24px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,.3);
+}
+.drink-illust {
+  margin-bottom: 16px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drink-illust img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-card);
+  padding: 6px;
+}
+.drink-illust .drink-emoji {
+  font-size: 3rem;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.4));
+}
+.drink-result {
+  min-height: 70px;
+  margin-bottom: 18px;
+}
+.drink-name {
+  font-family: var(--font-ja);
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  letter-spacing: .1em;
+  margin-bottom: 8px;
+}
+.drink-msg {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .92rem;
+  color: var(--text);
+  line-height: 1.85;
+}
+.drink-empty {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: .88rem;
+}
+.drink-btn {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--bg);
+  border: none;
+  padding: 11px 32px;
+  border-radius: 28px;
+  font-family: var(--font-ja);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s;
+  box-shadow: 0 4px 14px rgba(212,168,83,.3);
+}
+.drink-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(212,168,83,.4);
+  filter: brightness(1.1);
+}
+
+/* ================================================================
+   ── 公式サイトへのリンク ──
+   ================================================================ */
+.portfolio-section {
+  margin: 32px 0;
+  text-align: center;
+}
+.portfolio-label {
+  font-family: var(--font-ja);
+  font-size: .72rem;
+  letter-spacing: .22em;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 16px;
+}
+.portfolio-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--bg-panel) 0%, var(--bg-panel2) 100%);
+  border: 1px solid var(--gold);
+  color: var(--text);
+  text-decoration: none;
+  transition: all .3s;
+  box-shadow: 0 4px 16px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,220,150,.08);
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-btn::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(212,168,83,.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.portfolio-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.4), 0 0 24px rgba(212,168,83,.2);
+  border-color: var(--gold-light);
+}
+.portfolio-icon {
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(212,168,83,.5));
+}
+.portfolio-text {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.portfolio-title {
+  font-family: var(--font-ja);
+  font-size: 1rem;
+  color: var(--gold-pale);
+  letter-spacing: .1em;
+  font-weight: 600;
+}
+.portfolio-sub {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .78rem;
+  color: var(--text-sub);
+  letter-spacing: .04em;
+}
+.portfolio-arrow {
+  font-size: 1.1rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform .3s;
+}
+.portfolio-btn:hover .portfolio-arrow {
+  transform: translateX(4px);
+}
+
+/* ================================================================
+   レスポンシブ
+   ================================================================ */
+@media (max-width: 600px) {
+  .candy-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .session-card { grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
+  .session-price-col { grid-column: 1; grid-row: 3; flex-direction: row; align-items: center; gap: 14px; margin-top: 10px; }
+  .recommended-tag { top: 10px; right: 10px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================================================================
+     PAGE 1: お菓子を選ぶ
+     ================================================================ -->
+<div id="page-select" class="page active">
+  <header class="shop-header">
+    <div class="shop-en">Hoshikuzu Yumeshop</div>
+    <div class="shop-ja">✦ 星 屑 夢 屋 ✦</div>
+    <div class="gold-line" style="margin-top:24px;"></div>
+    <p class="shop-copy">
+      今日のあなたが選んだお菓子が、あなたの旅先を教えてくれます。<br>
+      ピンときたお菓子を、ひとつ選んでください。
+    </p>
+  </header>
+
+  <!-- フィルター -->
+  <div class="filter-wrap">
+    <button class="filter-btn active" data-filter="all">すべて</button>
+    <button class="filter-btn" data-filter="5">⭐ 星屑夢屋オリジナル</button>
+    <button class="filter-btn" data-filter="1">🔮 魔法用具店</button>
+    <button class="filter-btn" data-filter="2">🪞 記憶の鏡</button>
+    <button class="filter-btn" data-filter="3">🌊 海風の泉</button>
+    <button class="filter-btn" data-filter="4">🌸 Féerique</button>
+  </div>
+
+  <!-- グリッド -->
+  <div class="container">
+    <div class="candy-grid" id="candyGrid"></div>
+  </div>
+</div><!-- /page-select -->
+
+
+<!-- ================================================================
+     PAGE 2: 結果・購入ページ（JSで動的に書き換えます）
+     ================================================================ -->
+<div id="page-result" class="page">
+  <div class="container">
+
+    <!-- ヒーロー -->
+    <div class="result-hero" id="resultHero">
+      <!-- イラスト（画像があれば表示、なければ絵文字） -->
+      <div class="result-illust" id="rIllust"></div>
+      <div class="section-label" id="rSectionLabel"></div>
+      <div class="result-candy-name" id="rCandyName"></div>
+      <div class="result-candy-desc" id="rCandyDesc"></div>
+    </div>
+
+    <div class="gold-line" style="margin-bottom:32px;"></div>
+
+    <!-- お告げメッセージ -->
+    <div class="message-card" id="rMessageCard">
+      <p class="message-text" id="rMessage"></p>
+    </div>
+
+    <!-- セッション一覧 -->
+    <p class="sessions-title">— おすすめの体験セッション —</p>
+    <div class="sessions-grid" id="sessionsGrid"></div>
+
+    <!-- SNSシェアボタン -->
+    <div class="share-section">
+      <p class="share-title">— 結果をシェアする —</p>
+      <div class="share-buttons">
+        <a class="share-btn x-btn" id="shareX" href="#" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          Xでシェア
+        </a>
+        <a class="share-btn line-btn" id="shareLine" href="#" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          LINEで送る
+        </a>
+        <button class="share-btn copy-btn" id="shareCopy" onclick="copyShareText()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          結果をコピー
+        </button>
+      </div>
+    </div>
+
+    <!-- 本日のドリンク占い（独立セクション・誘導なし） -->
+    <div class="drink-section">
+      <p class="drink-title-label">— 本日のドリンク占い —</p>
+      <div class="drink-card">
+        <div class="drink-illust" id="drinkIllust">
+          <span class="drink-emoji">🍵</span>
+        </div>
+        <div class="drink-result" id="drinkResult">
+          <p class="drink-empty">あなたにおすすめの一杯は…</p>
+        </div>
+        <button class="drink-btn" onclick="drawDrink()">一杯を占う</button>
+      </div>
+    </div>
+
+    <!-- 公式サイトへのリンク -->
+    <div class="portfolio-section">
+      <p class="portfolio-label">— もっと魔法使いアリッサについて —</p>
+      <a href="https://magicalalyssak.my.canva.site/dafavb5irqa" target="_blank" rel="noopener" class="portfolio-btn">
+        <span class="portfolio-icon">✦</span>
+        <span class="portfolio-text">
+          <span class="portfolio-title">公式サイトへ</span>
+          <span class="portfolio-sub">魔法使いアリッサの世界をのぞく</span>
+        </span>
+        <span class="portfolio-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- 戻る -->
+    <div class="result-footer">
+      <button class="back-link" onclick="goBack()">← 別のお菓子を選び直す</button>
+    </div>
+
+  </div>
+</div><!-- /page-result -->
+
+
+<!-- ================================================================
+     JavaScript
+     ================================================================ -->
+<script>
+
+/* ================================================================
+   ① セクション定義
+      name  : 表示名
+      emoji : アイコン
+      color : アクセントクラス（result-sec-〇）
+   ================================================================ */
+const SECTIONS = {
+  1: { name: "アリッサの魔法用具店",   emoji: "🔮", colorClass: "result-sec-1" },
+  2: { name: "記憶の鏡 / クロニクル",  emoji: "🪞", colorClass: "result-sec-2" },
+  3: { name: "海風の泉",               emoji: "🌊", colorClass: "result-sec-3" },
+  4: { name: "Féerique",               emoji: "🌸", colorClass: "result-sec-4" },
+  5: { name: "星屑夢屋オリジナル",     emoji: "⭐", colorClass: "result-sec-5" },
+};
+
+
+/* ================================================================
+   ② 体験セッション定義
+   ================================================================
+
+   【編集方法】
+   ・price   : 表示する価格（文字列）
+   ・buyUrl  : 購入リンク先URL → STORESのURLに書き換えてください
+   ・section : このセッションを表示するセクション番号（1つだけ）
+
+   ================================================================ */
+const SESSIONS = [
+  {
+    id: "uranaoi",
+    name: "星屑菓子のお告げ",
+    desc: "今日のあなたに合ったお菓子を選び、短いメッセージをメールでお届けします。気軽に試せる入門鑑定。",
+    price: "500",
+    buyUrl: "https://magicalalyssak.stores.jp/items/69ff1dac54f0955f607e077c",
+    section: 5,
+  },
+  {
+    id: "callin",
+    name: "お菓子コールイン体験",
+    desc: "お菓子の声を通じて、今のあなたへのメッセージをメールでお届けする鑑定セッションです。",
+    price: "777",
+    buyUrl: "https://magicalalyssak.stores.jp/items/69ff1f268152702d974cdfbc",
+    section: 3,
+  },
+  {
+    id: "mahou",
+    name: "魔法用具ミニリーディング",
+    desc: "魔法用具店のアイテムを使い、あなたの魔力と今後の流れを読み解くメール鑑定。じっくり読める文章でお届けします。",
+    price: "1,500",
+    buyUrl: "https://magicalalyssak.stores.jp/items/69ff1b64717fd937d0a1404f",
+    section: 1,
+  },
+  {
+    id: "mirror",
+    name: "記憶の鏡ミニリーディング",
+    desc: "前世・記憶・魂の歴史から、今世のあなたへのメッセージを紐解くメール鑑定。じっくり読める文章でお届けします。",
+    price: "1,500",
+    buyUrl: "https://magicalalyssak.stores.jp/items/69ff1fe02ce5f6d59c48e70e",
+    section: 2,
+  },
+  {
+    id: "henshin",
+    name: "マジカルクローゼット(体験版)",
+    desc: "あなたの内なる美学を引き出し、ファッション・スタイリングの方向性をメールでご提案します。",
+    price: "1,500",
+    buyUrl: "https://magicalalyssak.stores.jp/items/69ff1d172ce5f6bfec48e735",
+    section: 4,
+  },
+];
+
+
+/* ================================================================
+   ③ お菓子データ
+   ================================================================
+
+   【編集方法】
+   ・section   : 対応するセクション番号（1〜5）
+   ・emoji     : お菓子の絵文字（画像がない場合に表示）
+   ・img       : イラスト画像のパス（例: "星屑金平糖.PNG"）
+                 画像がまだない場合は "" のままでOK → 絵文字が表示されます
+   ・name      : お菓子の名前
+   ・desc      : お菓子の説明（見た目・意味）
+   ・messages  : 表示するメッセージ（複数入れると毎回ランダムに変わります）
+
+   お菓子を追加したいときは { } のブロックをコピーして追加するだけでOK！
+
+   ================================================================ */
+const CANDIES = [
+  /* ── セクション1: 星屑夢屋オリジナル ── */
+  {
+    section: 5, emoji: "⭐", img: "星屑金平糖.PNG",
+    name: "星屑金平糖",
+    desc: "星屑のような小さな粒。ひと粒ごとに違う色と甘さが宿る",
+    messages: [
+      "小さな粒に、たくさんの願いが宿っています。",
+      "金平糖は星屑の落とし物。",
+      "今夜、空を見上げてみてください。",
+    ],
+  },
+  {
+    section: 5, emoji: "🌙", img: "月夜のアイスクリン.PNG",
+    name: "月夜のアイスクリン",
+    desc: "月明かりのような乳白色のプリン。とろける夜の甘さ",
+    messages: [
+      "夜空がそっと、あなたの隣に座っています。",
+      "月夜の冷たさは、優しさの形。",
+      "眠れない夜には、月があなたの話し相手になってくれます。",
+    ],
+  },
+  {
+    section: 5, emoji: "🌠", img: "流れ星ドロップ.PNG",
+    name: "錬金術ドロップ",
+    desc: "金と銀が混ざり合う、ふたつの味が変化するキャンディ",
+    messages: [
+      "願うことを、恥ずかしがらないでください。",
+      "あなたの願いを、星は覚えています。",
+      "変化を恐れないで。迷いの中で金を見つけます。",
+    ],
+  },
+  {
+    section: 5, emoji: "🌌", img: "夜空羊羹.PNG",
+    name: "夜空羊羹",
+    desc: "深い藍色の羊羹。金箔が散って夜空のよう",
+    messages: [
+      "静かな夜には、いつも何かが始まっています。",
+      "暗闇がなければ、星は見えません。",
+      "あなたが今いる夜の深さは、明けた時の美しさに比例します。",
+    ],
+  },
+  {
+    section: 5, emoji: "💫", img: "魔法陣ビスケット.PNG",
+    name: "魔法陣ビスケット",
+    desc: "星型の魔法陣が刻まれたサブレ。アニスとバニラの香り",
+    messages: [
+      "あなたの存在そのものが、ひとつの魔法です。",
+      "意図を持って動くとき、宇宙はそれに応えます。",
+      "何かを始めようとしているなら、今がその時です。",
+    ],
+  },
+
+  /* ── セクション2: アリッサの魔法用具店 ── */
+  {
+    section: 1, emoji: "🔮", img: "水晶琥珀糖.PNG",
+    name: "水晶琥珀糖",
+    desc: "透明に輝く琥珀糖。光を当てると虹色に散る",
+    messages: [
+      "透明な中にも、あなただけの色が宿ります。",
+      "光を通す心が、いちばん強いのです。",
+      "あなたの中に、まだ名付けられていない魔力があります。",
+    ],
+  },
+  {
+    section: 1, emoji: "⚗️", img: "錬金術ドロップ.PNG",
+    name: "錬金術ドロップ",
+    desc: "瓶の中で輝く、色とりどりの球形キャンディ",
+    messages: [
+      "変化を恐れないで。錬金術師は迷いの中で金を見つけます。",
+      "あなたが触れるものは、少しずつ輝き始めています。",
+      "今の自分は途中経過。最高傑作はまだ先にあります。",
+    ],
+  },
+  {
+    section: 1, emoji: "🕯️", img: "蜜蝋タフィー.PNG",
+    name: "蜜蝋タフィー",
+    desc: "柔らかな炎の色をした、蜂蜜とバニラの引き伸ばしキャンディ",
+    messages: [
+      "灯した光は、必ず誰かの夜を照らします。",
+      "あなたの温かさを、もっと信じてください。",
+      "小さな炎でも、暗闇には十分です。",
+    ],
+  },
+  {
+    section: 1, emoji: "🌿", img: "薬草ハーブミント.PNG",
+    name: "薬草ハーブミント",
+    desc: "古い魔法書に挟まれていたハーブをかたどった清涼感あるキャンディ",
+    messages: [
+      "自然の知恵はいつもあなたのそばにあります。",
+      "体と心が何かを欲しているとき、植物はそれを知っています。",
+      "今日、緑に触れてみてください。何かが変わります。",
+    ],
+  },
+  {
+    section: 1, emoji: "🌹", img: "薔薇香るボンボン.PNG",
+    name: "薔薇香るボンボン",
+    desc: "薔薇の形をかたどった、華やかな香りのボンボンショコラ",
+    messages: [
+      "香りは、言葉より遠くへ届きます。",
+      "薔薇は、棘も含めて美しい。",
+      "あなたの存在は、気づかぬうちに誰かを包んでいます。",
+    ],
+  },
+
+  /* ── セクション3: 記憶の鏡クロニクル ── */
+  {
+    section: 2, emoji: "🪞", img: "鏡映羊羹.PNG",
+    name: "鏡映羊羹",
+    desc: "表面が鏡のように滑らかな藍色の羊羹",
+    messages: [
+      "鏡の中のあなたも、本当のあなたです。",
+      "映ったものに、嘘はありません。",
+      "記憶は変わらなくても、その意味は変わります。",
+    ],
+  },
+  {
+    section: 2, emoji: "📜", img: "古書カステラ.PNG",
+    name: "古書カステラ",
+    desc: "古い本の装丁をかたどった、しっとりしたカステラ",
+    messages: [
+      "あなたの物語は、まだ書かれている途中です。",
+      "今日の一文が、10年後の伏線になります。",
+      "書き直せないページなどありません。語り方を変えればいい。",
+    ],
+  },
+  {
+    section: 2, emoji: "💎", img: "時の琥珀糖.PNG",
+    name: "時の琥珀糖",
+    desc: "時を閉じ込めたような、透明で色が変わる琥珀糖",
+    messages: [
+      "時間は直線ではなく、螺旋です。また同じところへ戻ってきたなら、それは成長の証。",
+      "今この瞬間は、いつか最も大切な記憶になります。",
+      "忘れたいと思ったことが、あなたを作っています。",
+    ],
+  },
+  {
+    section: 2, emoji: "🌌", img: "星図金平糖.PNG",
+    name: "星屑金平糖",
+    desc: "記憶の中に散る星のような、淡い色合いの金平糖",
+    messages: [
+      "星はあなたが生まれた日を覚えています。",
+      "夜空を見上げるとき、あなたも誰かの星です。",
+      "あなたの座標は、ちゃんと記されています。",
+    ],
+  },
+  {
+    section: 2, emoji: "🗝️", img: "古鍵チョコレート.PNG",
+    name: "古鍵チョコレート",
+    desc: "錆びた古い鍵の形をした、ビターチョコレート",
+    messages: [
+      "あなたが持つ鍵は、まだ使われていない扉のためにあります。",
+      "忘れた夢の中に、大切なヒントが残っています。",
+      "過去の記憶は重荷ではなく、地図です。",
+    ],
+  },
+
+  /* ── セクション4: 海風の泉 ── */
+  {
+    section: 3, emoji: "🌊", img: "潮風アイスクリン.PNG",
+    name: "潮風アイスクリン",
+    desc: "海のしずくのような淡い青のプリン。ほのかな塩気",
+    messages: [
+      "波は引いた後に、必ず戻ってきます。",
+      "海は何も押しつけずに、ただ傍にいてくれます。",
+      "今は満ち潮でなくても、いつかまた満ちます。",
+    ],
+  },
+  {
+    section: 3, emoji: "🐚", img: "真珠ラムネ.PNG",
+    name: "貝珠ラムネ",
+    desc: "真珠のように丸い、パステルカラーのラムネ菓子",
+    messages: [
+      "殻の中で、ゆっくり育つものがあります。",
+      "あなたは、まだ磨かれている途中です。",
+      "小さな殻でも、中には無限の空間があります。",
+    ],
+  },
+  {
+    section: 3, emoji: "🫧", img: "海上がりみつ豆.PNG",
+    name: "海上がりみつ豆",
+    desc: "色とりどりの豆が波間に漂うような涼しげなみつ豆",
+    messages: [
+      "体を温めることは、心を温めること。",
+      "今日はゆっくり、自分を労わってください。",
+      "甘さの中に、海の記憶があります。",
+    ],
+  },
+  {
+    section: 3, emoji: "💙", img: "海硝子錦切り.PNG",
+    name: "海硝子錦切り",
+    desc: "海硝子のような淡い青の錦玉。波打つ透明感",
+    messages: [
+      "透明であることは、強さの一種です。",
+      "硝子は、波に磨かれて優しくなります。",
+      "深海のように、あなたにはまだ誰も知らない部分があります。",
+    ],
+  },
+  {
+    section: 3, emoji: "🪸", img: "貝殻温泉まんじゅう.PNG",
+    name: "貝殻温泉まんじゅう",
+    desc: "貝殻の刻印が入った、ふっくらした薄皮まんじゅう",
+    messages: [
+      "貝は耳に当てると海の音がする。あなたの内側にも、静かな声があります。",
+      "殻の中に閉じこもることは、時に必要な休息です。",
+      "温かさは、誰かが用意してくれたものでなくていい。",
+    ],
+  },
+
+  /* ── セクション5: Féerique ── */
+  {
+    section: 4, emoji: "🌸", img: "桜マカロン.PNG",
+    name: "桜マカロン",
+    desc: "薄紅色のマカロン。ひと口で春が来る",
+    messages: [
+      "桜のように、散ることを恐れずに咲いてください。",
+      "あなたが纏う色は、今の季節より少し先を知っています。",
+      "ファッションは、まだ言葉にならない感情の翻訳です。",
+    ],
+  },
+  {
+    section: 4, emoji: "🌷", img: "花霞アイスクリン.PNG",
+    name: "花霞アイスクリン",
+    desc: "春霞のようなパステルピンクのアイスクリン",
+    messages: [
+      "かすみの向こうに、あなたの春があります。",
+      "柔らかさは、強さの別の名前です。",
+      "あなたの色は、今の季節より少し先を知っています。",
+    ],
+  },
+  {
+    section: 4, emoji: "💜", img: "紫陽花琥珀糖.PNG",
+    name: "紫陽花琥珀糖",
+    desc: "紫陽花のような青紫の琥珀糖。雨の日に食べたくなる",
+    messages: [
+      "雨の日にしか咲かない美しさがあります。",
+      "色を変えることは、生き延びる知恵です。",
+      "複雑であることは、豊かであることです。",
+    ],
+  },
+  {
+    section: 4, emoji: "🎀", img: "シルクリボンキャラメル.PNG",
+    name: "シルクリボンキャラメル",
+    desc: "絹のリボンをまとった上品なキャラメル。口溶けなめらか",
+    messages: [
+      "上質なものに触れると、自分の感覚が磨かれます。",
+      "装うことは、自分を偽ることではなく、自分を選ぶことです。",
+      "素材を大切にする人は、自分自身も大切にできます。",
+    ],
+  },
+  {
+    section: 4, emoji: "🌷", img: "チューリップ練り切り.PNG",
+    name: "チューリップ練り切り",
+    desc: "職人仕立てのチューリップ型和菓子。可憐さと凛々しさを持つ",
+    messages: [
+      "あなたの美しさには、和の奥行きがあります。",
+      "控えめな中に、揺るぎない芯があります。",
+      "咲く時期は、あなたが決めることができます。",
+    ],
+  },
+];
+
+
+/* ================================================================
+   以下はロジック部分です（基本的に編集不要）
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   ★ シェア設定
+   ----------------------------------------------------------------
+   SITE_URL  : あなたのサイトURLに書き換えてください
+   HASHTAGS  : シェア時に付けるハッシュタグ（#は不要）
+   MAGIC_TIPS: 「今日の小さな魔法」のランダムフレーズ一覧
+   ---------------------------------------------------------------- */
+const SITE_URL  = "https://your-site-url.com"; /* ← あなたのURLに変えてください */
+const HASHTAGS  = ["星屑夢屋", "フローラミラージュ"];
+
+const MAGIC_TIPS = [
+  "今日、空を1分だけ見上げてみてください。",
+  "今日は好きな香りのそばで過ごしてみてください。",
+  "今日だけ、少しだけ遠回りして帰ってみてください。",
+  "今日、誰かに「ありがとう」を一つ多く伝えてみてください。",
+  "今日は気になっていたページを開いてみてください。",
+  "今日、好きな色を身につけてみてください。",
+  "今日の夜、キャンドルを一本灯してみてください。",
+  "今日だけ、スマホを少し遠ざけてみてください。",
+  "今日、食べたいものを素直に食べてみてください。",
+  "今日、鏡の前で自分に微笑んでみてください。",
+];
+
+/* ================================================================
+   ④ ドリンクデータ（占い用・誘導なし）
+   ================================================================
+   ・name : ドリンク名
+   ・img  : 画像パス（連番26〜30）
+   ・msg  : ひとこと（複数入れるとランダム表示）
+   ================================================================ */
+const DRINKS = [
+  {
+    name: "夜空のバタフライピー",
+    img:  "夜空のバタフライピー.PNG",
+    msg: [
+      "静かな青に身を委ねると、心が深呼吸します。",
+      "夜空はいつでも、あなたの味方です。",
+      "色が変わる魔法を、あなた自身で起こしてみて。",
+    ],
+  },
+  {
+    name: "夢見るいちごミルク",
+    img:  "夢見るいちごミルク.PNG",
+    msg: [
+      "甘やかすことは、悪いことではありません。",
+      "今日くらいは、子どもの自分に戻っても。",
+      "夢を見ることを、大人になっても忘れないで。",
+    ],
+  },
+  {
+    name: "星屑ホットチョコ",
+    img:  "星屑ホットチョコ.PNG",
+    msg: [
+      "濃く、深く、温かく。",
+      "重さの中にも、確かな甘さがあります。",
+      "今夜は星屑のように、自分を散りばめて。",
+    ],
+  },
+  {
+    name: "月明かりのレモネード",
+    img:  "月明かりのレモネード.PNG",
+    msg: [
+      "酸味は、目を覚まさせる魔法です。",
+      "少しの苦さが、人生を引き締めます。",
+      "月の光は、あなたの輪郭を優しく照らします。",
+    ],
+  },
+  {
+    name: "はちみつミルクティー",
+    img:  "はちみつミルクティー.PNG",
+    msg: [
+      "優しさは、何よりの薬です。",
+      "ゆっくり飲むほど、心が整います。",
+      "蜜のように、滴る幸せを味わって。",
+    ],
+  },
+];
+
+/* 現在のシェア情報（showResult で更新される） */
+let currentShareData = { candyName: '', sectionName: '', message: '', magicTip: '' };
+
+/* シェアテキストを組み立てる関数 */
+function buildShareText() {
+  const { candyName, sectionName, message, magicTip } = currentShareData;
+  return (
+    `${candyName} を選んだ今日の私は、\n` +
+    `✦ ${sectionName} へ導かれました。\n\n` +
+    `今日の星屑メッセージ\n` +
+    `「${message}」\n\n` +
+    `今日の小さな魔法\n` +
+    `${magicTip}\n\n` +
+    `${SITE_URL}\n` +
+    HASHTAGS.map(t => `#${t}`).join(' ')
+  );
+}
+
+/* X（Twitter）シェアURLを更新 */
+function updateShareLinks() {
+  const text = buildShareText();
+  const xUrl   = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(SITE_URL)}&text=${encodeURIComponent(text)}`;
+  document.getElementById('shareX').href    = xUrl;
+  document.getElementById('shareLine').href = lineUrl;
+}
+
+/* クリップボードにコピー */
+function copyShareText() {
+  const text = buildShareText();
+  navigator.clipboard.writeText(text).then(() => {
+    const toast = document.getElementById('copyToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2800);
+  }).catch(() => {
+    /* clipboard APIが使えない環境向けフォールバック */
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const toast = document.getElementById('copyToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2800);
+  });
+}
+
+
+
+const grid = document.getElementById('candyGrid');
+
+// カード生成
+function renderCards(filter) {
+  grid.innerHTML = '';
+  const list = filter === 'all' ? CANDIES : CANDIES.filter(c => c.section == filter);
+  list.forEach((candy, i) => {
+    const sec = candy.section;
+    const card = document.createElement('div');
+    card.className = 'candy-card';
+    card.dataset.sec = sec;
+    card.style.animationDelay = (i * 0.04) + 's';
+
+    /* 画像あり→img、なし→絵文字 */
+    const visual = candy.img
+      ? `<img class="candy-img" src="${candy.img}" alt="${candy.name}" loading="lazy">`
+      : `<span class="candy-emoji">${candy.emoji}</span>`;
+
+    card.innerHTML = `
+      ${visual}
+      <div class="candy-name">${candy.name}</div>
+      <div class="candy-desc">${candy.desc}</div>
+      <span class="candy-badge">${SECTIONS[sec].emoji} ${SECTIONS[sec].name}</span>
+    `;
+    card.addEventListener('click', () => showResult(candy));
+    grid.appendChild(card);
+  });
+}
+
+// 結果ページを表示
+function showResult(candy) {
+  const sec = SECTIONS[candy.section];
+  const msg = candy.messages[Math.floor(Math.random() * candy.messages.length)];
+
+  // ページのカラークラスを切り替え
+  const resultPage = document.getElementById('page-result');
+  resultPage.className = 'page active ' + sec.colorClass;
+
+  // ヒーロー部分（イラスト：画像あり→img表示、なし→絵文字）
+  const illust = document.getElementById('rIllust');
+  if (candy.img) {
+    illust.innerHTML = `<img src="${candy.img}" alt="${candy.name}">`;
+  } else {
+    illust.innerHTML = `<span class="result-emoji-big">${candy.emoji}</span>`;
+  }
+  document.getElementById('rCandyName').textContent = candy.name;
+  document.getElementById('rCandyDesc').textContent = candy.desc;
+
+  const label = document.getElementById('rSectionLabel');
+  label.textContent = sec.emoji + '　' + sec.name;
+  label.style.color = getAccentColor(candy.section);
+  label.style.borderColor = getAccentColor(candy.section);
+
+  // メッセージ
+  document.getElementById('rMessage').textContent = msg;
+
+  // シェアデータを保存してリンクを更新
+  const magicTip = MAGIC_TIPS[Math.floor(Math.random() * MAGIC_TIPS.length)];
+  currentShareData = {
+    candyName:   candy.emoji + ' ' + candy.name,
+    sectionName: sec.name,
+    message:     msg,
+    magicTip:    magicTip,
+  };
+  updateShareLinks();
+
+  // セッション一覧を組み立て（そのセクションの1件だけ表示）
+  const sgrid = document.getElementById('sessionsGrid');
+  sgrid.innerHTML = '';
+  const visibleSessions = SESSIONS.filter(s => s.section === candy.section);
+
+  visibleSessions.forEach(sess => {
+    const card = document.createElement('div');
+    card.className = 'session-card recommended';
+    card.innerHTML = `
+      <span class="recommended-tag">✦ おすすめ体験</span>
+      <div class="session-name">${sess.name}</div>
+      <div class="session-desc">${sess.desc}</div>
+      <div class="session-price-col">
+        <div class="session-price">¥${sess.price}<span> 税込</span></div>
+        <a class="buy-btn" href="${sess.buyUrl}" target="_blank" rel="noopener">
+          購入する →
+        </a>
+      </div>
+    `;
+    sgrid.appendChild(card);
+  });
+
+  // ページ切り替え
+  document.getElementById('page-select').classList.remove('active');
+  resultPage.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// アクセントカラーを返す
+function getAccentColor(sec) {
+  const map = { 1: '#a08fdc', 2: '#7ab8d8', 3: '#68c9a2', 4: '#d47da8', 5: '#d4a853' };
+  return map[sec] || '#d4a853';
+}
+
+// 選択ページに戻る
+function goBack() {
+  document.getElementById('page-result').classList.remove('active');
+  document.getElementById('page-select').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// フィルターボタン
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderCards(btn.dataset.filter);
+  });
+});
+
+// ドリンク占い（誘導なし・独立）
+function drawDrink() {
+  const drink = DRINKS[Math.floor(Math.random() * DRINKS.length)];
+  const msg = drink.msg[Math.floor(Math.random() * drink.msg.length)];
+
+  // イラスト表示（画像があれば img、なければ絵文字）
+  const illust = document.getElementById('drinkIllust');
+  if (drink.img) {
+    illust.innerHTML = `<img src="${drink.img}" alt="${drink.name}">`;
+  } else {
+    illust.innerHTML = `<span class="drink-emoji">🍵</span>`;
+  }
+
+  document.getElementById('drinkResult').innerHTML = `
+    <div class="drink-name">✦ ${drink.name} ✦</div>
+    <div class="drink-msg">${msg}</div>
+  `;
+}
+
+// 初期描画
+renderCards('all');
+</script>
+<!-- コピー完了トースト -->
+<div class="copy-toast" id="copyToast">✦ クリップボードにコピーしました</div>
+
+</body>
+</html>
